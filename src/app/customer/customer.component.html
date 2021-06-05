@@ -1,0 +1,256 @@
+
+
+                        <head>
+                          
+                            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+                            
+                            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+                            
+                            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+                                integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+                          
+                          <meta charset="utf-8">
+                          <title>Registeration Form</title>
+                          
+                          <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+                          
+                          <a href="css/nunito-font.css"></a>
+                          
+                          <a rel="stylesheet" href="css/style.css"></a> 
+                          <meta name="robots" content="noindex, follow">
+                          </head>
+                          <body >
+                            <br><br>
+                         <h1 text align="center">Customer Registration</h1><br>
+                         <h6 text align="center">Fill in the details to register  !!</h6><br><br><br>
+                          <!-- <div class="form-v9-content" style="background-image: url('images/form-v9.jpg')"> -->
+                        
+                        
+                        
+                             <div class="container">
+                            <form (ngSubmit)="saveCustomer()" [formGroup]="addCust">
+                              <div class="row">
+                        
+                                  <!-- First Name -->
+                                  
+                                      
+                                      <div class="form-group col-lg-6 mb-4">
+                                        
+                                        <span class="form-group-text bg-white px-4 border-md border-right-0">
+                                            <i class="fa fa-user text-muted"></i>
+                                        </span>
+                                    
+                                        <label for="firstName">First Name:</label>
+                                        <input type="text" formControlName="firstName" placeholder="Please enter your first name *" name="firstName" class="form-control" [(ngModel)]="customer.firstName" id="firstName">
+                                     <div *ngIf=" Submitted && addCust.controls.firstName.errors">Give  first name</div>
+                                      
+                                  </div>
+                                  
+                        
+                                  <!-- Last Name -->
+                                  <div class="form-group col-lg-6 mb-4">
+                                          <span class="form-group-text bg-white px-4 border-md border-right-0">
+                                              <i class="fa fa-user text-muted"></i>
+                                          </span>
+                                      
+                                      
+                                        <label for="lastName">Last Name:</label>
+                                        <input type="text" formControlName="lastName" placeholder="Please enter your last name *" name="lastName" class="form-control" [(ngModel)]="customer.lastName" id="lastName">
+                                     <div *ngIf=" Submitted && addCust.controls.lastName.errors">Give  Last name</div>
+                                      
+                                  
+                                  </div>
+                        
+                                  <!-- Email Address -->
+                                  <div class="form-group col-lg-6 mb-4">
+                                          <span class="form-group-text bg-white px-4 border-md border-right-0">
+                                              <i class="fa fa-envelope text-muted"></i>
+                                          </span>
+                                      
+                                         
+                                            <label for="email">Email:</label>
+                                            <input type="email" formControlName="email" placeholder="Please enter your email *" name="email" class="form-control" [(ngModel)]="customer.email" id="email">
+                                         <div *ngIf=" Submitted && addCust.controls.email.errors">Give your email</div>
+                                          
+                                      </div>
+                                      
+                                      
+                        
+                                  <!-- Phone Number -->
+                                  <div class="form-group col-lg-6 mb-4">
+                                          <span class="form-group-text bg-white px-4 border-md border-right-0">
+                                              <i class="fa fa-phone-square text-muted"></i>
+                                          </span>
+                                      
+                                      
+                                        <label for="mobileNumber">Mobile No:</label>
+                                        <input type="text" formControlName="mobileNumber" placeholder="Please enter your mobile Number*" name="mobileNumber" class="form-control" [(ngModel)]="customer.mobileNumber" id="mobileNumber">
+                                     <div *ngIf=" Submitted && addCust.controls.mobileNumber.errors">Give  first name</div>
+                                      
+                                  
+    
+                                  </div>.
+                          <!-- Password -->
+                          <div class="form-group col-lg-6 mb-4">
+                                <span class="form-group-textbg-white px-4 border-md border-right-0">
+                                    <i class="fa fa-lock text-muted"></i>
+                                </span>
+                            
+                            
+                                <label for="password">password:</label>
+                                <input type="text" formControlName="password" placeholder="Please enter your password *" name="password" class="form-control" [(ngModel)]="customer.password" id="password">
+                             <div *ngIf=" Submitted && addCust.controls.password.errors">Give  first name</div>
+                              
+                          
+                          </div>
+
+
+                          <!-- Password
+                          <div class="input-group col-lg-6 mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                    <i class="fa fa-lock text-muted"></i>
+                                </span>
+                            </div>
+                            <input type="text" class="form-control" id="confirmpassword" placeholder="Confirm Password *" required [(ngModel)]="customer.confirmpassword" name="confirmpassword">
+                        </div> -->
+              
+                      
+                        
+                                  <!-- Job -->
+                                  <div class="form-group col-lg-6 mb-4">
+                                          <span class="form-group-text bg-white px-4 border-md border-right-0">
+                                              <i class="fa fa-building text-muted"></i>
+                                          </span>
+                                      
+
+                                        <label for="buildingName">Building Name:</label>
+                                        <input type="text" formControlName="buildingName" placeholder="Please enter your building Name *" name="buildingName" class="form-control" [(ngModel)]="customer.buildingName" id="buildingName">
+                                     <div *ngIf=" Submitted && addCust.controls.buildingName.errors">Give building name</div>
+                                      
+                                  
+                                  </div>
+                        
+
+                                    
+                        
+                                  <div class="form-group col-lg-6 mb-4">
+                                      <span class="form-group-textbg-white px-4 border-md border-right-0">
+                                        <i class="fa fa-street-view text muted"></i>
+                                      </span>
+                                  
+                                  
+                                    <label for="streetNo">streetNo:</label>
+                                    <input type="text" formControlName="streetNo" placeholder="Please enter your streetNo*" name="streetNo" class="form-control" [(ngModel)]="customer.streetNo" id="streetNo">
+                                 <div *ngIf=" Submitted && addCust.controls.streetNo.errors">Give your street No</div>
+                                  
+                              
+                              </div>
+                        
+                              <div class="form-group col-lg-6 mb-4">
+                                    <span class="form-group-text bg-white px-4 border-md border-right-0">
+                                        
+                                        <i class="	fas fa-city text muted" ></i>
+                                    </span>
+                                
+                                
+                                    <label for="city">City</label>
+                                    <input type="text" formControlName="city" placeholder="Please enter your city*" name="city" class="form-control" [(ngModel)]="customer.city" id="city">
+                                 <div *ngIf=" Submitted && addCust.controls.city.errors">Give your city</div>
+                                  
+                              
+                              </div>
+                              <div class="form-group col-lg-6 mb-4">
+                                <span class="form-group-text bg-white px-4 border-md border-right-0">
+                                    <i class="fa fa-city text muted"></i>
+                                    
+                                </span>
+                            
+                            
+                                <label for="state">State</label>
+                                <input type="text" formControlName="state" placeholder="Please enter your state*" name="state" class="form-control" [(ngModel)]="customer.state" id="state">
+                             <div *ngIf=" Submitted && addCust.controls.state.errors">Give your state</div>
+                              
+                          
+                          </div>
+                                
+                        
+                              <div class="form-group col-lg-6 mb-4">
+                                  <span class="form-group-text bg-white px-4 border-md border-right-0">
+                                      <i class="	fas fa-map-pin text-muted"></i>
+                                  </span>
+                              
+                             
+                                <label for="pincode">Pincode:</label>
+                                <input type="text" formControlName="pincode" placeholder="Please enter your pincode*" name="pincode" class="form-control" [(ngModel)]="customer.pincode" id="pincode">
+                             <div *ngIf=" Submitted && addCust.controls.pincode.errors">Give your pincode</div>
+                              
+                          </div>
+                          
+                            
+                        
+                          <div class="form-group col-lg-6 mb-4">
+                                <span class="form-group-text bg-white px-4 border-md border-right-0">
+                                    <i class="fas fa-globe-asia text-muted"></i>
+                                </span>
+                            
+                           
+                                <label for="country">Country</label>
+                                <input type="text" formControlName="country" placeholder="Please enter your country*" name="country" class="form-control" [(ngModel)]="customer.country" id="country">
+                             <div *ngIf=" Submitted && addCust.controls.country.errors">Give your country</div>
+                              
+                          
+                          </div>
+                            
+                        
+                                <br>
+                        
+                                  <!-- Submit Button -->
+                                  <div class="form-group col-lg-4 mx-auto mb-0">
+                                      <a href="#"  >
+                                           <span class="font-weight-bold"> <input type="submit" class="font-weight-bold" class="btn btn-success btn-block py-2" name="" value="Create your account">
+                                          </span>
+                                      </a>
+                                  </div>
+                        
+                                  <!-- Divider Text -->
+                                  <div  class="form-group col-lg-12 mx-auto d-flex align-items-center my-4">
+                                      <div class="border-bottom w-100 ml-5"></div>
+                                      <span class="px-2 small text-muted font-weight-bold text-muted">OR</span>
+                                      <div class="border-bottom w-100 mr-5"></div>
+                                  </div>
+                        
+                                  <!-- Social Login -->
+                                  <div align ="center" class="form-group col-lg-4 mx-auto">
+                                      <a href="#" class="btn btn-primary btn-block py-2 btn-facebook">
+                                          <i class="fa fa-facebook-f "></i>
+                                          <span class="font-weight-bold" >Continue with Facebook</span>
+                                      </a>
+                                      <a href="#"class="text-muted font-weight-bold" class="btn btn-secondary btn-block py-2 btn-twitter">
+                                          <i class="fa fa-twitter "></i>
+                                          <span class="font-weight-bold">Continue with Twitter</span>
+                                      </a>
+                                  </div>
+                        
+                                  <!-- Already Registered -->
+                                  <div class="text-center w-100">
+                                      <p class="text-dark ml-2 font-weight-bold"  >Already Registered? <a href="#" class="text-info ml-2">Login</a></p>
+                                  </div>
+                        
+                              </div>
+                          </form>
+                             </div>
+                          <!-- </div> -->
+                         
+                          
+                          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+                          <script>
+                            window.dataLayer = window.dataLayer || [];
+                            function gtag(){dataLayer.push(arguments);}
+                            gtag('js', new Date());
+                          
+                            gtag('config', 'UA-23581568-13');
+                          </script>
+                          <script defer src="https://static.cloudflareinsights.com/beacon.min.js" 
+                          data-cf-beacon='{"rayId":"656c8bd739184ae7","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2021.5.2","si":10}'></script>
+                          </body>
